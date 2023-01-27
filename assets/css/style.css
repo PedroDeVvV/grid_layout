@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid yellow;
-  font-family: 'Didatic ghost', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   font-weight: normal;
 }
 
@@ -19,7 +18,7 @@ body {
   grid-template-columns: 2.5fr 2.5fr 1.25fr 1.25fr 2.5fr;
   grid-template-rows: 80px auto;
   align-items: stretch;
-  align-items: stretch;
+  justify-items: stretch;
 }
 
 .pad-32 {
@@ -27,24 +26,12 @@ body {
 }
 
 .header-1 {
+  background: white;
+  grid-column: 1/5;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background: white;
-  grid-column: 1/5;
   align-items: center;
-}
-
-.header-1 nav {
-  width: 33%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.header-1 nav a {
-  text-decoration: none;
-  color: #000;
 }
 
 .logo {
@@ -56,10 +43,52 @@ body {
   margin-left: 32px;
 }
 
+.header-1 nav {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-1 nav a {
+  text-decoration: none;
+  color: black;
+}
+
 .header-2 {
   background: yellow;
   grid-column: 5/6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.carrinho {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrinho p {
+  width: 100px;
+  display: inherit;
+}
+
+.carrinho p span {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 24px;
+  background: black;
+}
+
 
 .banner {
   background: white;
@@ -74,12 +103,12 @@ body {
 .banner-image {
   width: 50%;
   display: table;
-  padding: 40px;
+  padding: 16px 40px;
 }
 
 .banner-text h1 {
   font-size: 64px;
-  line-height: 80px;
+  line-height: 72px;
   margin: 0 0 16px 0;
   padding: 0;
 }
@@ -87,42 +116,42 @@ body {
 .banner-text h2 {
   font-size: 28px;
   line-height: 32px;
-  margin: 56px 0 16px 0;
+  margin: 32px 0 8px 0;
   padding: 0;
 }
 
 .banner-text h4 {
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 16px 0;
+  margin: 0;
   padding: 0;
 }
 
 .banner-text a {
   font-size: 21px;
   color: #fff;
-  background-color: #3963A4;
+  background: #3963A4;
   padding: 10px 32px;
-  transition: .5s;
   margin-top: 24px;
   display: table;
   text-align: center;
 }
 
-.banner-text a:hover {
-  background-color: blue;
-}
-
-.banner-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+.banner-image img {
+  height: 100%;
+  max-height: 318px;
+  width: auto;
 }
 
 .einstein {
   background: #3963A4;
   grid-column: 3/5;
   grid-row: 2/4;
+}
+
+.einstein h2,
+.einstein p {
+  color: white;
 }
 
 .texto {
@@ -135,6 +164,12 @@ body {
   background: yellow;
   grid-column: 1/2;
   grid-row: 3/5;
+}
+
+.jobs img {
+  height: 100%;
+  max-height: 270px;
+  width: auto;
 }
 
 .vermelho {
@@ -151,7 +186,12 @@ body {
 
 .preto {
   background: black;
-  color: aliceblue;
   grid-column: 4/5;
   grid-row: 4/5;
+}
+
+.jobs img,
+.einstein img {
+  max-width: 100%;
+  height: auto;
 }
